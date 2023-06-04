@@ -1,0 +1,890 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: hsl(206, 94%, 87%);
+}
+@media (min-width: 768px) {
+    main {
+        background-color: white;
+        width: 60%;
+        height: 70vh;
+        margin: 15vh auto;
+        padding: 1%;
+        border-radius: 15px;
+        display: flex;
+    }
+
+    nav {
+        background-image: url(../public/images/bg-sidebar-desktop.svg);
+        background-size: no-repeat center top fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        border-radius: 10px;
+        width: 30%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    .nav {
+        margin: 15% 10% 0 10%;
+        height: 45%;
+        display: grid;
+        grid-template-rows: repeat(4, 1fr);
+        gap: 20px;
+    }
+    .number {
+        color: white;
+        width: 30px;
+        height: 30px;
+        border-radius: 15px;
+        border: 1px solid white;
+        text-align: center;
+        align-self: center;
+        display: grid;
+    }
+    .number-step {
+        align-self: center;
+    }
+    .active-step {
+        background-color: hsl(206, 94%, 87%);
+        color: black;
+    }
+
+    .nav-one,
+    .nav-two,
+    .nav-tree,
+    .nav-four {
+        display: grid;
+        grid-template-columns: 2fr 6fr;
+    }
+
+    .info {
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        width: 100%;
+    }
+    .stennum {
+        margin: 0;
+        color: hsl(229, 24%, 87%);
+        font-size: 12px;
+    }
+    .info-text {
+        margin: 0;
+        color: white;
+        font-size: 14px;
+        font-weight: 500;
+    }
+
+    .one {
+        width: 50%;
+        margin: 4% auto;
+    }
+    .step-one {
+        display: grid;
+        grid-template-rows: 28% 1fr 1fr 1fr;
+        height: 80%;
+    }
+    button {
+        color: white;
+        border: none;
+        border-radius: 5px;
+        background-color: hsl(213, 96%, 18%);
+        width: 25%;
+        height: 55%;
+        justify-self: end;
+        align-self: self-end;
+    }
+    button:hover {
+        cursor: pointer;
+        background-color: hsl(243, 85%, 58%);
+    }
+    h3 {
+        color: hsl(213, 96%, 18%);
+        font-size: 28px;
+        margin: 0;
+        margin-bottom: 10px;
+    }
+    .header-span {
+        color: hsl(231, 11%, 63%);
+    }
+    .text-name {
+        margin: 0;
+        color: hsl(213, 96%, 18%);
+        display: inline;
+    }
+    .invalid-text {
+        margin: 0;
+        color: red;
+        float: right;
+    }
+    .input-name,
+    .input-email,
+    .input-phonenumber {
+        color: hsl(213, 96%, 18%);
+        width: 98.2%;
+        height: 40%;
+        border: 1px solid hsl(213, 96%, 18%);
+        border-radius: 5px;
+        margin-top: 5px;
+        margin-bottom: 7%;
+        padding-left: 15px;
+        cursor: pointer;
+    }
+    .invalid-input {
+        border: 1px solid red;
+    }
+
+    .two {
+        width: 50%;
+        margin: 4% auto;
+    }
+    .step-two {
+        display: grid;
+        height: 80%;
+        grid-template-rows: 28% 3fr 2fr;
+    }
+    .button {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        height: 20%;
+    }
+    .next-step {
+        color: white;
+        border: none;
+        border-radius: 5px;
+        background-color: hsl(213, 96%, 18%);
+        width: 50%;
+        height: 55%;
+        justify-self: end;
+        vertical-align: bottom;
+    }
+    .next-step:hover {
+        cursor: pointer;
+        background-color: hsl(243, 85%, 58%);
+    }
+    .go-back {
+        color: grey;
+        background-color: white;
+        justify-self: start;
+        vertical-align: bottom;
+        width: 50%;
+        font-size: 16px;
+        padding: 0;
+        text-align: start;
+    }
+    .go-back:hover {
+        color: hsl(213, 96%, 18%);
+        cursor: pointer;
+        background-color: white;
+    }
+
+    .plan {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 15px;
+    }
+
+    .arcade,
+    .advanced,
+    .pro {
+        padding: 10px;
+        border: 1px solid hsl(229, 24%, 87%);
+        border-radius: 5px;
+    }
+    .arcade:hover,
+    .advanced:hover,
+    .pro:hover {
+        background-color: hsl(206, 94%, 87%);
+        cursor: pointer;
+    }
+    .plan-checked {
+        background-color: hsl(206, 94%, 87%);
+        border: 1px solid hsl(243, 85%, 58%);
+    }
+    input[value='Arcade'],
+    input[value='Advanced'],
+    input[value='Pro'] {
+        height: 0;
+        width: 0;
+        opacity: 0;
+    }
+    .plan-text {
+        margin: 20% 0 5% 0;
+        padding: 0;
+        color: hsl(213, 96%, 18%);
+        font-size: 14px;
+    }
+    .plan-price {
+        margin: 0;
+        padding: 0;
+        color: hsl(231, 11%, 63%);
+        font-size: 12px;
+    }
+    .month-free {
+        margin: 0;
+        padding: 0;
+        padding-top: 5px;
+        font-size: 10px;
+        color: hsl(243, 100%, 62%);
+    }
+
+    .toggle {
+        margin-top: 6%;
+        text-align: center;
+        background-color: hsl(206, 94%, 87%);
+        border: 1px solid hsl(206, 94%, 87%);
+        border-radius: 10px;
+        height: 45%;
+    }
+    .month,
+    .year {
+        width: 40%;
+        display: inline-block;
+        color: hsl(231, 11%, 63%);
+        font-size: 16px;
+        padding-top: 2%;
+    }
+    .month {
+        text-align: end;
+        margin-right: 1%;
+    }
+    .year {
+        text-align: start;
+        margin-left: 1%;
+    }
+
+    .switch {
+        display: inline-block;
+        position: relative;
+        width: 40px;
+        height: 20px;
+    }
+    .switch__input {
+        height: 0;
+        width: 0;
+        opacity: 0;
+    }
+    .switch__slider {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        border-radius: 20px;
+        background-color: hsl(213, 96%, 18%);
+        transition: 0.4s;
+    }
+    .switch__slider::before {
+        content: '';
+        position: absolute;
+        cursor: pointer;
+        left: 2px;
+        bottom: 2px;
+        height: 16px;
+        width: 16px;
+        border-radius: 50%;
+        background-color: white;
+        transition: 0.4s;
+    }
+    .switch__input:focus + .switch__slider {
+        box-shadow: 0 0 1px #2196f3;
+    }
+    .switch__input:checked + .switch__slider {
+        background-color: #2196f3;
+    }
+    .switch__input:checked + .switch__slider::before {
+        transform: translateX(18px);
+        -webkit-transform: translateX(18px);
+        -ms-transform: translateX(18px);
+    }
+
+    .three {
+        width: 50%;
+        margin: 4% auto;
+    }
+    .step-three {
+        display: grid;
+        grid-template-rows: 28% 1fr 10%;
+        height: 80%;
+    }
+    .setting {
+        display: grid;
+        grid-template-rows: repeat(3, 1fr);
+        gap: 5%;
+    }
+
+    .online-service {
+        border: 1px solid hsl(231, 11%, 63%);
+        cursor: pointer;
+        border-radius: 10px;
+        height: 100%;
+    }
+
+    .online-service {
+        display: grid;
+        grid-template-columns: 15% 1fr 21%;
+    }
+    .setting-input {
+        justify-self: center;
+        border: 1px solid hsl(231, 11%, 63%);
+    }
+    .setting-text {
+        padding-top: 5%;
+    }
+    .setting-price {
+        color: hsl(243, 100%, 62%);
+        align-self: center;
+        font-weight: 400;
+    }
+    .set-text {
+        color: hsl(213, 96%, 18%);
+    }
+    .set-description {
+        margin-top: 1%;
+        color: hsl(231, 11%, 63%);
+        font-size: 14px;
+    }
+
+    .four {
+        width: 50%;
+        margin: 4% auto;
+    }
+    .step-four {
+        display: grid;
+        grid-template-rows: 28% 1fr;
+        height: 80%;
+    }
+    .finish-data {
+        display: grid;
+        grid-template-rows: 3fr 1fr;
+    }
+    .data {
+        background-color: hsl(206, 94%, 87%);
+        border-radius: 10px;
+    }
+    .first-basket {
+        height: 35%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    .tariff {
+        display: grid;
+        grid-template-rows: repeat(3, 1fr);
+        height: 100%;
+        margin-left: 5%;
+    }
+
+    .total-price {
+        display: grid;
+        grid-template-rows: repeat(3, 1fr);
+        height: 100%;
+        margin-right: 5%;
+        justify-self: right;
+    }
+    .tariff-price-text {
+        margin: 0;
+        grid-row: 2/3;
+        font-weight: 600;
+    }
+
+    hr {
+        margin: 0;
+    }
+
+    .second-basket {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        height: 65%;
+    }
+    .second-online-service,
+    .larger-storage,
+    .customizable-profile {
+        color: hsl(231, 11%, 63%);
+        margin-left: 5%;
+        align-self: center;
+    }
+    .second-basket-price-1,
+    .second-basket-price-2,
+    .second-basket-price-3 {
+        margin-right: 5%;
+        color: hsl(213, 96%, 18%);
+        font-weight: 600;
+        justify-self: end;
+        align-self: center;
+        font-size: 14px;
+    }
+
+    .total-total,
+    .summary {
+        margin-top: 5%;
+        display: inline-block;
+    }
+    .total-total {
+        color: hsl(231, 11%, 63%);
+        width: 70%;
+    }
+    .summary {
+        width: 30%;
+        font-size: 20px;
+        font-weight: 700;
+        color: hsl(243, 100%, 62%);
+    }
+
+    .step-five {
+        width: 50%;
+        margin: 14% auto;
+        text-align: center;
+    }
+    .thank-you {
+        font-size: 26px;
+        font-weight: 700;
+    }
+    .thank {
+        color: hsl(231, 11%, 63%);
+        margin: 0;
+    }
+}
+
+@media (max-width: 767px) {
+    main {
+        width: 100%;
+        height: 100vh;
+    }
+
+    nav {
+        height: 20vh;
+        width: 100%;
+        background-image: url(../public/images/bg-sidebar-mobile.svg);
+        background-size: no-repeat center top fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+    }
+    .num-step {
+        width: 100%;
+        padding-top: 5%;
+        text-align: center;
+    }
+
+    .nav-one,
+    .nav-two,
+    .nav-three,
+    .nav-four {
+        display: inline-block;
+        margin: 0 10px 0;
+        text-align: center;
+        color: white;
+        width: 25px;
+        height: 25px;
+        border: 1px solid white;
+        border-radius: 12.5px;
+    }
+    .active-step {
+        background-color: hsl(206, 94%, 87%);
+        color: black;
+    }
+    .number-step {
+        line-height: 25px;
+    }
+    .button {
+        height: 15vh;
+        width: 100%;
+        position: absolute;
+        top: 85vh;
+        text-align: center;
+        background-color: white;
+    }
+    button {
+        color: white;
+        border: none;
+        border-radius: 5px;
+        background-color: hsl(213, 96%, 18%);
+        width: 25%;
+        height: 50%;
+        margin-top: 20px;
+    }
+    button:hover {
+        cursor: pointer;
+        background-color: hsl(243, 85%, 58%);
+    }
+
+    .go-back {
+        color: grey;
+        background-color: white;
+        justify-self: start;
+        vertical-align: bottom;
+        width: 25%;
+        font-size: 16px;
+        padding: 0;
+        text-align: start;
+        margin-right: 40%;
+    }
+    .go-back:hover {
+        color: hsl(213, 96%, 18%);
+        cursor: pointer;
+        background-color: white;
+    }
+    .step-one {
+        background-color: white;
+        border: 1px solid white;
+        border-radius: 10px;
+        width: 80%;
+        display: grid;
+        grid-template-rows: 30% 1fr 1fr 1fr;
+        position: absolute;
+        bottom: 33%;
+        left: 5.8%;
+        height: 50%;
+        padding: 15px 15px;
+    }
+    h3 {
+        color: hsl(213, 96%, 18%);
+        font-size: 22px;
+        margin: 0px;
+        margin-bottom: 10px;
+    }
+    .header-span {
+        color: hsl(231, 11%, 63%);
+        display: inline-block;
+        width: 70%;
+    }
+
+    .text-name {
+        margin: 0;
+        color: hsl(213, 96%, 18%);
+        display: inline;
+        font-weight: 600;
+    }
+    .invalid-text {
+        margin: 0;
+        font-size: 14px;
+        color: red;
+        float: right;
+    }
+
+    .input-name,
+    .input-email,
+    .input-phonenumber {
+        color: hsl(213, 96%, 18%);
+        width: 93.6%;
+        height: 45%;
+        border: 1px solid hsl(213, 96%, 18%);
+        border-radius: 5px;
+        margin-top: 2px;
+        margin-bottom: 2%;
+        padding-left: 15px;
+        cursor: pointer;
+    }
+    .invalid-input {
+        border: 1px solid red;
+    }
+
+    .step-two {
+        background-color: white;
+        border: 1px solid white;
+        border-radius: 10px;
+        width: 80%;
+        display: grid;
+        grid-template-rows: 1fr 3fr auto;
+        gap: 10px;
+        position: absolute;
+        bottom: 18%;
+        left: 5.8%;
+        height: 65%;
+        padding: 15px 15px;
+    }
+    .plan {
+        display: grid;
+        grid-template-rows: repeat(3, 1fr);
+        gap: 10px;
+    }
+    .step-two-svg {
+        padding-top: 15px;
+    }
+    input[value='Arcade'],
+    input[value='Advanced'],
+    input[value='Pro'] {
+        height: 0;
+        width: 0;
+        opacity: 0;
+    }
+    .arcade,
+    .advanced,
+    .pro {
+        padding-left: 15px;
+        border: 1px solid hsl(229, 24%, 87%);
+        border-radius: 5px;
+        display: grid;
+        grid-template-columns: 20% 1fr;
+    }
+
+    .arcade:hover,
+    .advanced:hover,
+    .pro:hover {
+        background-color: hsl(206, 94%, 87%);
+        cursor: pointer;
+    }
+    .description-selected {
+        padding-top: 15px;
+    }
+    .plan-text {
+        margin: 0;
+        padding: 0;
+        color: hsl(213, 96%, 18%);
+        font-size: 16px;
+    }
+    .plan-price {
+        margin: 0;
+        color: hsl(231, 11%, 63%);
+        font-size: 14px;
+    }
+
+    .month-free {
+        margin: 0;
+        font-size: 12px;
+        color: hsl(243, 100%, 62%);
+    }
+
+    .toggle {
+        text-align: center;
+        background-color: hsl(206, 94%, 87%);
+        border: 1px solid hsl(206, 94%, 87%);
+        border-radius: 10px;
+        height: 100%;
+    }
+    .month,
+    .year {
+        width: 40%;
+        display: inline-block;
+        color: hsl(231, 11%, 63%);
+        font-size: 16px;
+        padding-top: 3%;
+    }
+    .month {
+        text-align: end;
+        margin-right: 1%;
+    }
+    .year {
+        text-align: start;
+        margin-left: 1%;
+    }
+
+    .switch {
+        display: inline-block;
+        position: relative;
+        width: 40px;
+        height: 20px;
+    }
+    .switch__input {
+        height: 0;
+        width: 0;
+        opacity: 0;
+    }
+    .switch__slider {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        border-radius: 20px;
+        background-color: hsl(213, 96%, 18%);
+        transition: 0.4s;
+    }
+    .switch__slider::before {
+        content: '';
+        position: absolute;
+        cursor: pointer;
+        left: 2px;
+        bottom: 2px;
+        height: 16px;
+        width: 16px;
+        border-radius: 50%;
+        background-color: white;
+        transition: 0.4s;
+    }
+    .switch__input:focus + .switch__slider {
+        box-shadow: 0 0 1px #2196f3;
+    }
+    .switch__input:checked + .switch__slider {
+        background-color: #2196f3;
+    }
+    .switch__input:checked + .switch__slider::before {
+        transform: translateX(18px);
+        -webkit-transform: translateX(18px);
+        -ms-transform: translateX(18px);
+    }
+    .step-three {
+        width: 85%;
+        height: 45vh;
+        margin: 0 auto;
+        padding: 5% 5%;
+        background-color: white;
+        border-radius: 15px;
+        display: grid;
+        grid-template-rows: 22% 1fr;
+        position: relative;
+        top: -45px;
+    }
+    .setting {
+        padding-top: 20px;
+        display: grid;
+        grid-template-rows: repeat(3, 1fr);
+        gap: 5%;
+    }
+
+    .online-service {
+        border: 1px solid hsl(231, 11%, 63%);
+        background-color: white;
+        cursor: pointer;
+        border-radius: 10px;
+        height: 100%;
+    }
+    .online-service {
+        display: grid;
+        grid-template-columns: 15% 1fr 21%;
+    }
+    .setting-input {
+        justify-self: center;
+        border: 1px solid hsl(231, 11%, 63%);
+    }
+    .setting-text {
+        padding-top: 5%;
+    }
+    .setting-price {
+        color: hsl(243, 100%, 62%);
+        align-self: center;
+        font-weight: 400;
+    }
+    .set-text {
+        color: hsl(213, 96%, 18%);
+    }
+    .set-description {
+        margin-top: 1%;
+        color: hsl(231, 11%, 63%);
+        font-size: 14px;
+    }
+    .plan-checked {
+        background-color: hsl(206, 94%, 87%);
+        border: 1px solid hsl(243, 85%, 58%);
+    }
+
+    .step-four {
+        width: 85%;
+        height: 45vh;
+        margin: 0 auto;
+        padding: 5% 5%;
+        background-color: white;
+        border-radius: 15px;
+        display: grid;
+        grid-template-rows: 35% 1fr;
+        position: relative;
+        top: -45px;
+    }
+    .finish-data {
+        display: grid;
+        grid-template-rows: 2fr 1fr;
+    }
+    .data {
+        background-color: hsl(206, 94%, 87%);
+        border-radius: 10px;
+    }
+
+    .first-basket {
+        height: 35%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    .tariff {
+        display: grid;
+        grid-template-rows: repeat(3, 1fr);
+        height: 100%;
+        margin-left: 5%;
+    }
+
+    .total-price {
+        display: grid;
+        grid-template-rows: repeat(3, 1fr);
+        height: 100%;
+        margin-right: 5%;
+        justify-self: right;
+    }
+    .tariff-price-text {
+        margin: 0;
+        grid-row: 2/3;
+        font-weight: 600;
+    }
+
+    hr {
+        margin: 0;
+    }
+
+    .second-basket {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        height: 65%;
+    }
+    .second-online-service,
+    .larger-storage,
+    .customizable-profile {
+        color: hsl(231, 11%, 63%);
+        margin-left: 5%;
+        align-self: center;
+    }
+    .second-basket-price-1,
+    .second-basket-price-2,
+    .second-basket-price-3 {
+        margin-right: 5%;
+        color: hsl(213, 96%, 18%);
+        font-weight: 600;
+        justify-self: end;
+        align-self: center;
+        font-size: 14px;
+    }
+    .total-total,
+    .summary {
+        margin-top: 5%;
+        display: inline-block;
+    }
+    .total-total {
+        color: hsl(231, 11%, 63%);
+        width: 70%;
+    }
+    .summary {
+        width: 30%;
+        font-size: 20px;
+        font-weight: 700;
+        color: hsl(243, 100%, 62%);
+    }
+
+    .step-five {
+        text-align: center;
+
+        width: 80%;
+        height: 45vh;
+        margin: 0 auto;
+        padding: 15% 5%;
+        background-color: white;
+        border-radius: 15px;
+        position: relative;
+        top: -45px;
+    }
+    .thank-you {
+        font-size: 26px;
+        font-weight: 700;
+    }
+    .thank {
+        color: hsl(231, 11%, 63%);
+        margin: 0;
+    }
+    .none-button {
+        display: none;
+    }
+}
